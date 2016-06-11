@@ -890,6 +890,7 @@ AbstractPouchDB.prototype.destroy =
   function destroyDb() {
     // call destroy method of the particular adaptor
     self._destroy(opts, function (err, resp) {
+      /* istanbul ignore if */
       if (err) {
         return callback(err);
       }

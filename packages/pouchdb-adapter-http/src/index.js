@@ -964,6 +964,7 @@ function HttpPouch(opts, callback) {
       url: genDBUrl(host, ''),
       method: 'DELETE'
     }, function (err, resp) {
+      /* istanbul ignore if */
       if (err && err.status && err.status !== 404) {
         return callback(err);
       }
